@@ -10,8 +10,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "htmlhint": "^1.5.1",
     "stylelint": "^16.20.0",
-    "htmlhint": "^1.1.5",
     "stylelint-config-standard": "^38.0.0"
   }
 }
