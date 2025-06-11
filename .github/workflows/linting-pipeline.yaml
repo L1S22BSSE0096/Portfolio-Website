@@ -19,16 +19,15 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install dependencies
+      - name: Install linters globally
         run: |
-          npm install htmlhint stylelint stylelint-config-standard --save-dev
+          npm install -g htmlhint stylelint stylelint-config-standard
 
       - name: Lint HTML
-        run: npx htmlhint "src/**/*.html"
+        run: htmlhint "src/**/*.html"
 
       - name: Lint CSS
-        run: npx stylelint "styles/**/*.css"
+        run: stylelint "styles/**/*.css"
 
-      - name: Check available binaries
-        run: ls -l node_modules/.bin
-
+      - name: Show available binaries
+        run: which htmlhint && which stylelint && ls -l $(which stylelint)
