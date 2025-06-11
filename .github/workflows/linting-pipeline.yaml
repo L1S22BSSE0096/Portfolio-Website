@@ -19,9 +19,8 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install dependencies
+      - name: Install HTMLHint and Stylelint
         run: |
-          npm install
           npm install htmlhint stylelint stylelint-config-standard --save-dev
 
       - name: Run HTMLHint
